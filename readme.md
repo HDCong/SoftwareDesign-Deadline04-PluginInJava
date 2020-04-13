@@ -1,6 +1,6 @@
 # Software Design
 
-## Deadline 3: Use user-written plugins by 2 ways
+## Deadline 4: Use user-written plugins by 2 ways
 
 1. Create MyPlugin abstract class have 2 methods
 
