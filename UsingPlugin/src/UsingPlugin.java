@@ -9,66 +9,72 @@ import java.util.List;
 
 public class UsingPlugin {
     private static List<MyPlugin> plugins;
-    private static final String RESOURCE_REL_PATH = "plugins/";
-    private static final String PLUGINS_PACKAGE_NAME = "external";
+    private static final String PLUGIN_FOLDER = "plugins/";
+    private static final String EXTERNAL_PACKAGE = "external";
 
 
     public static void main(String[] argv) {
-        System.out.println("aiaiia");
-
         initPlugin();
-        System.out.println((String)(plugins.get(2).execute("notepad","")));
+        for(int i = 0; i < plugins.size();i++){
+            System.out.println(plugins.get(i).getName());
+        }
+
+        System.out.println((plugins.get(0).execute("8.5","15.5")).toString());
+
+        System.out.println((String)(plugins.get(1).execute("notepad","")));
 
     }
 
     private static void initPlugin() {
         plugins = new ArrayList<>();
+        // load internal plugin extends, define in package: com.hdcong.internal
         loadInternalFunction();
+
+        // Firstly, build the external plugin.
+        // Then copy the package (in out of project PluginExternal: external folder) to plugins folder
+        // load the .class in plugins/external
         loadExternalFunction();
 
     }
 
     private static void loadInternalFunction() {
+        // Only one plugin extends the MyPlugin abstract class
         plugins.add(new Add2Number());
     }
     private static void loadExternalFunction() {
-        List<Class> classes = loadClassViaPath();
+
+        List<Class> classes = loadClassInExternalFolder();
 
         for (Class c : classes) {
             try {
-                MyPlugin newPlugin = (MyPlugin) c.newInstance();
-                plugins.add(newPlugin);
+                plugins.add((MyPlugin) c.newInstance());
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private static List<Class> loadClassViaPath() {
+    private static List<Class> loadClassInExternalFolder() {
+
         List<Class> classes = new ArrayList<>();
 
-        ClassLoader classLoader = createClassLoaderAtResourceDirectory();
+        ClassLoader classLoader = initClassLoader(PLUGIN_FOLDER);
+
         if (classLoader == null)
             return classes;
 
-        //get directory of plugin package
-        File pluginsDirectory = new File(RESOURCE_REL_PATH  + PLUGINS_PACKAGE_NAME+"/");
+        File externalFolder = new File(PLUGIN_FOLDER  + EXTERNAL_PACKAGE+"/");
 
-        //get all file names in this directory
-        String[] fileNames = pluginsDirectory.list();
+        String[] fileNames = externalFolder.list();
+
+        if (fileNames==null) return classes;
 
         for (String fileName : fileNames) {
-            System.out.println(fileName);
-
-            // we are only interested in .class files
             if (fileName.endsWith(".class")) {
-                // removes the .class extension
-                String className =   PLUGINS_PACKAGE_NAME+ "." + fileName.substring(0, fileName.length() - 6);
-                System.out.println(className);
+                String className =   EXTERNAL_PACKAGE+ "." + fileName.substring(0, fileName.length() - 6);
                 try {
-                    //create a new class with this class name
-                    Class newClass = classLoader.loadClass(className);
-                    //add new class to the list
+                    Class<?> newClass = classLoader.loadClass(className);
+
                     classes.add(newClass);
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
@@ -76,29 +82,20 @@ public class UsingPlugin {
                 }
             }
         }
-
         return classes;
     }
 
-    private static ClassLoader createClassLoaderAtResourceDirectory() {
-        //get directory of resource via relative path
-        File resourceDirectory = new File(RESOURCE_REL_PATH );
-
-        //create a classLoader in this directory
-        ClassLoader classLoader;
+    private static ClassLoader initClassLoader(String dir) {
+        // Reference: https://mkyong.com/java/how-to-load-classes-which-are-not-in-your-classpath/
+        ClassLoader result;
         try {
-            // Convert file to a URL
-            URL url = resourceDirectory.toURI().toURL();
+            File file = new File(dir );
+            URL url = file.toURI().toURL();
             URL[] urls = new URL[]{url};
-
-            // Create a new class loader with the directory
-            classLoader = new URLClassLoader(urls);
+            result = new URLClassLoader(urls);
         } catch (Exception e) {
-            e.printStackTrace();
             return null;
         }
-
-        return classLoader;
+        return result;
     }
-
 }

@@ -15,7 +15,7 @@ public class ExternalPluginImplement extends MyPlugin {
         String s = (String) o;
         try{
             Runtime.getRuntime().exec(s);
-            return "Success";
+            return "Success in open " + s;
         } catch (IOException e) {
             return "Failed";
         }

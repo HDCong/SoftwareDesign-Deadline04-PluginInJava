@@ -13,8 +13,8 @@ public class Add2Number extends MyPlugin {
         try{
             String s1 = (String)o;
             String s2= (String )o1;
-            Double n1 = Double.parseDouble(s1);
-            Double n2 = Double.parseDouble(s2);
+            double n1 = Double.parseDouble(s1);
+            double n2 = Double.parseDouble(s2);
             return n1+n2;
         }
         catch (Exception e){
