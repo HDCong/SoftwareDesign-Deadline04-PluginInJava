@@ -57,7 +57,8 @@ public class UsingPlugin {
     private static List<Class> loadClassInExternalFolder() {
 
         List<Class> classes = new ArrayList<>();
-        File externalFolder = new File("external/");
+
+        File externalFolder = new File("plugins/");
 
         ClassLoader classLoader = null;
 
@@ -67,7 +68,6 @@ public class UsingPlugin {
         } catch (MalformedURLException e) {
             e.printStackTrace();
             return classes;
-
         }
 
         String[] fileNames = externalFolder.list();
@@ -75,18 +75,16 @@ public class UsingPlugin {
         if (fileNames==null) return classes;
 
         for (String fileName : fileNames) {
-            System.out.println(fileName+" ---");
             if (fileName.endsWith(".class")) {
-
                 // in my case: should loaded class: external.ExternalPluginImplement
                 String className =   EXTERNAL_PACKAGE+ "." + fileName.substring(0, fileName.length() - 6);
                 System.out.println(className);
                 try {
-                    Class<?> newClass = classLoader.loadClass("external.ExternalPluginImplement");
+                    Class<?> newClass = classLoader.loadClass(className);
                     classes.add(newClass);
                 } catch (ClassNotFoundException e) {
+                    System.out.println('s');
                     e.printStackTrace();
-                    return classes;
                 }
             }
         }
