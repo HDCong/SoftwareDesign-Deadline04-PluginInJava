@@ -18,4 +18,4 @@ https://viblo.asia/p/load-class-at-runtime-gGJ5928GKX2
 
 https://stackoverflow.com/questions/32222151/how-to-load-all-compiled-class-from-a-folder
 
-**IDE : InteliJ IDEA**
+**IDE : IntelliJ IDEA**
