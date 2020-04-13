@@ -2,6 +2,9 @@ import com.hdcong.internal.Add2Number;
 import com.hdcong.myplugin.MyPlugin;
 
 import java.io.File;
+import java.io.FileFilter;
+import java.io.FilenameFilter;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
@@ -9,96 +12,86 @@ import java.util.List;
 
 public class UsingPlugin {
     private static List<MyPlugin> plugins;
-    private static final String RESOURCE_REL_PATH = "plugins/";
-    private static final String PLUGINS_PACKAGE_NAME = "external";
-
+    private static final String PLUGINS_FOLDER_DIR = "plugins";
 
     public static void main(String[] argv) {
-        System.out.println("aiaiia");
-
         initPlugin();
-        System.out.println((String)(plugins.get(2).execute("notepad","")));
+        System.out.println("List class loaded: ");
+        for (int i = 0; i < plugins.size(); i++) {
+            System.out.println(plugins.get(i).getName());
+        }
+
+        System.out.println((plugins.get(0).execute("8.5", "15.5")).toString());
+
+        System.out.println((String) (plugins.get(1).execute("notepad", "")));
 
     }
 
     private static void initPlugin() {
         plugins = new ArrayList<>();
-        loadInternalFunction();
-        loadExternalFunction();
+        // load internal plugin extends, define in package: com.hdcong.internal
+        loadInternalClass();
+
+        // Firstly, build the external plugin.
+        // Then copy the package (in out of project PluginExternal: external folder) to plugins folder
+        // load the .class in plugins/external
+        loadExternalClass();
 
     }
 
-    private static void loadInternalFunction() {
+    private static void loadInternalClass() {
+        // Only one plugin extends the MyPlugin abstract class
         plugins.add(new Add2Number());
     }
-    private static void loadExternalFunction() {
-        List<Class> classes = loadClassViaPath();
+
+    private static void loadExternalClass() {
+
+        List<Class> classes = loadClassInPluginsFolder(new File(PLUGINS_FOLDER_DIR));
 
         for (Class c : classes) {
             try {
-                MyPlugin newPlugin = (MyPlugin) c.newInstance();
-                plugins.add(newPlugin);
+                plugins.add((MyPlugin) c.newInstance());
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private static List<Class> loadClassViaPath() {
-        List<Class> classes = new ArrayList<>();
+    private static List<Class> loadClassInPluginsFolder(File file)  {
+        // Reference: https://stackoverflow.com/questions/32222151/how-to-load-all-compiled-class-from-a-folder
 
-        ClassLoader classLoader = createClassLoaderAtResourceDirectory();
-        if (classLoader == null)
-            return classes;
+        List<Class> classesLoaded = new ArrayList<>();
 
-        //get directory of plugin package
-        File pluginsDirectory = new File(RESOURCE_REL_PATH  + PLUGINS_PACKAGE_NAME+"/");
+        ClassLoader classLoader = null;
+        try {
+            classLoader = new URLClassLoader(new URL[]{file.toURI().toURL()});
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            return classesLoaded;
+        }
 
-        //get all file names in this directory
-        String[] fileNames = pluginsDirectory.list();
+        File[] files = file.listFiles(new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".class");
+            }
+        });
 
-        for (String fileName : fileNames) {
+
+        for (File fileName : files) {
             System.out.println(fileName);
-
-            // we are only interested in .class files
-            if (fileName.endsWith(".class")) {
-                // removes the .class extension
-                String className =   PLUGINS_PACKAGE_NAME+ "." + fileName.substring(0, fileName.length() - 6);
-                System.out.println(className);
-                try {
-                    //create a new class with this class name
-                    Class newClass = classLoader.loadClass(className);
-                    //add new class to the list
-                    classes.add(newClass);
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                    return classes;
-                }
+            // in my case: should loaded class: external.ExternalPluginImplement
+            String className = fileName.getName().substring(0, fileName.getName().length() - 6);
+            try {
+                Class<?> clazz = classLoader.loadClass(className);
+                classesLoaded.add(clazz);
+                System.out.println("Loaded class " + className);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
         }
 
-        return classes;
-    }
-
-    private static ClassLoader createClassLoaderAtResourceDirectory() {
-        //get directory of resource via relative path
-        File resourceDirectory = new File(RESOURCE_REL_PATH );
-
-        //create a classLoader in this directory
-        ClassLoader classLoader;
-        try {
-            // Convert file to a URL
-            URL url = resourceDirectory.toURI().toURL();
-            URL[] urls = new URL[]{url};
-
-            // Create a new class loader with the directory
-            classLoader = new URLClassLoader(urls);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-
-        return classLoader;
+        return classesLoaded;
     }
 
 }
