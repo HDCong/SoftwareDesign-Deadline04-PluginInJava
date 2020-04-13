@@ -2,6 +2,7 @@ import com.hdcong.internal.Add2Number;
 import com.hdcong.myplugin.MyPlugin;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.ArrayList;
@@ -9,7 +10,6 @@ import java.util.List;
 
 public class UsingPlugin {
     private static List<MyPlugin> plugins;
-    private static final String PLUGIN_FOLDER = "plugins/";
     private static final String EXTERNAL_PACKAGE = "external";
 
 
@@ -42,7 +42,7 @@ public class UsingPlugin {
         plugins.add(new Add2Number());
     }
     private static void loadExternalFunction() {
-
+        // Make sure package folder contain only .class type file
         List<Class> classes = loadClassInExternalFolder();
 
         for (Class c : classes) {
@@ -57,24 +57,32 @@ public class UsingPlugin {
     private static List<Class> loadClassInExternalFolder() {
 
         List<Class> classes = new ArrayList<>();
+        File externalFolder = new File("external/");
 
-        ClassLoader classLoader = initClassLoader(PLUGIN_FOLDER);
+        ClassLoader classLoader = null;
 
-        if (classLoader == null)
+        try {
+            classLoader = new URLClassLoader(new URL[]{externalFolder.toURL()});
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
             return classes;
 
-        File externalFolder = new File(PLUGIN_FOLDER  + EXTERNAL_PACKAGE+"/");
+        }
 
         String[] fileNames = externalFolder.list();
 
         if (fileNames==null) return classes;
 
         for (String fileName : fileNames) {
+            System.out.println(fileName+" ---");
             if (fileName.endsWith(".class")) {
-                String className =   EXTERNAL_PACKAGE+ "." + fileName.substring(0, fileName.length() - 6);
-                try {
-                    Class<?> newClass = classLoader.loadClass(className);
 
+                // in my case: should loaded class: external.ExternalPluginImplement
+                String className =   EXTERNAL_PACKAGE+ "." + fileName.substring(0, fileName.length() - 6);
+                System.out.println(className);
+                try {
+                    Class<?> newClass = classLoader.loadClass("external.ExternalPluginImplement");
                     classes.add(newClass);
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
@@ -83,19 +91,5 @@ public class UsingPlugin {
             }
         }
         return classes;
-    }
-
-    private static ClassLoader initClassLoader(String dir) {
-        // Reference: https://mkyong.com/java/how-to-load-classes-which-are-not-in-your-classpath/
-        ClassLoader result;
-        try {
-            File file = new File(dir );
-            URL url = file.toURI().toURL();
-            URL[] urls = new URL[]{url};
-            result = new URLClassLoader(urls);
-        } catch (Exception e) {
-            return null;
-        }
-        return result;
     }
 }
