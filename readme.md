@@ -10,7 +10,7 @@
 
 4. Build Plugin External. Copy file .class after build to project Using Plugin
 
-5. To load class external at runtime. Define a ClassLoader , then get all file .class in folder contain (In this case, the class is not belong any package)
+5. To load class external at runtime. Define a ClassLoader , then get all file .class in folder contain (In this case, the class dose not belong any package)
 
 ## References: 
 
