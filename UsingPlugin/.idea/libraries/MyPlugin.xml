@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="MyPlugin">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../MyPlugin/out/artifacts/MyPlugin_jar/MyPlugin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../MyPlugin.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

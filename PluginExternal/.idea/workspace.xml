@@ -22,17 +22,12 @@
     <list default="true" id="69a2f877-ab8c-4d73-8fb4-e51a5493eaa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../MyPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPlugin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/artifacts/MyPlugin_jar/MyPlugin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/com/hdcong/myplugin/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/com/hdcong/myplugin/MyPlugin.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/resources/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PluginExternal/external/ExternalPluginImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/external/ExternalPluginImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExternalPluginImplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UsingPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/UsingPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/com/hdcong/internal/Add2Number.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/src/UsingPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/src/UsingPlugin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,25 +37,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ExternalPluginImplement.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/out/production/PluginExternal/ExternalPluginImplement.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#0#587#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -98,32 +80,18 @@
             <path>
               <item name="PluginExternal" type="b2602c69:ProjectViewProjectNode" />
               <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PluginExternal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PluginExternal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PluginExternal" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PluginExternal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -134,7 +102,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586755849185" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586756032771" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -178,13 +146,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1854000" />
+    <option name="totallyTimeSpent" value="2021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />

@@ -26,18 +26,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a3e1090a-fc99-4619-aba3-e02a76487c82" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MyPlugin_jar/MyPlugin.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyPlugin/com/hdcong/myplugin/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyPlugin/com/hdcong/myplugin/MyPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyPlugin/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MyPlugin_jar/MyPlugin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MyPlugin_jar/MyPlugin.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PluginExternal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PluginExternal/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PluginExternal/out/production/PluginExternal/external/ExternalPluginImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PluginExternal/src/external/ExternalPluginImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PluginExternal/src/ExternalPluginImplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UsingPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/UsingPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/com/hdcong/internal/Add2Number.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/src/UsingPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/src/UsingPlugin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,12 +71,6 @@
               <item name="MyPlugin" type="462c0819:PsiDirectoryNode" />
               <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MyPlugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyPlugin" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -100,7 +85,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586755849175" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586756032762" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -153,16 +138,17 @@
       <workItem from="1586712488907" duration="3144000" />
       <workItem from="1586746105397" duration="858000" />
       <workItem from="1586749481322" duration="885000" />
+      <workItem from="1586755710793" duration="256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1219000" />
+    <option name="totallyTimeSpent" value="1475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
