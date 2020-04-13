@@ -20,19 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69a2f877-ab8c-4d73-8fb4-e51a5493eaa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyPlugin/.idea/artifacts/MyPlugin_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPlugin/.idea/artifacts/MyPlugin_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPlugin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/artifacts/MyPlugin_jar/MyPlugin.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/com/hdcong/myplugin/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/com/hdcong/myplugin/MyPlugin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../MyPlugin/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyPlugin/out/production/MyPlugin/resources/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PluginExternal/external/ExternalPluginImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PluginExternal/external/ExternalPluginImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PluginExternal/external/ExternalPluginImplement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/external/ExternalPluginImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExternalPluginImplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UsingPlugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/external/ExternalPluginImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/UsingPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/UsingPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/com/hdcong/internal/Add2Number.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/com/hdcong/internal/Add2Number.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/UsingPlugin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UsingPlugin/out/production/UsingPlugin/com/hdcong/internal/Add2Number.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/plugins/ExternalPluginImplement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UsingPlugin/src/UsingPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UsingPlugin/src/UsingPlugin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,6 +40,32 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ExternalPluginImplement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/out/production/PluginExternal/ExternalPluginImplement.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#0#587#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -91,10 +116,7 @@
             <path>
               <item name="PluginExternal" type="b2602c69:ProjectViewProjectNode" />
               <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="PluginExternal" type="462c0819:PsiDirectoryNode" />
-              <item name="external" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -112,7 +134,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586721167063" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586751746734" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -156,25 +178,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="986000" />
+    <option name="totallyTimeSpent" value="1854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -182,15 +198,21 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +259,26 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="450" y="197" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1586746581585" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ExternalPluginImplement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/PluginExternal/ExternalPluginImplement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#587#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

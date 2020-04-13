@@ -1,5 +1,3 @@
-package external;
-
 import com.hdcong.myplugin.MyPlugin;
 
 import java.io.IOException;
